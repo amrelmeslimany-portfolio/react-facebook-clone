@@ -1,4 +1,6 @@
 import { createID } from "./helpers";
+import reactImg from "./imgs/react.jpg";
+import coverImg from "./imgs/cover.jpg";
 
 export const leftSidebarLinks = [
   {
@@ -56,49 +58,49 @@ export const leftSidebarLinks = [
 export const leftSidebarGroupLinks = [
   {
     id: 1,
-    img: "/react-facebook-clone/imgs/react.jpg",
+    img: reactImg,
     title: "Facebook React Group",
     group: true,
   },
   {
     id: 2,
-    img: "/react-facebook-clone/imgs/react.jpg",
+    img: reactImg,
     title: "Facebook React Group",
     group: true,
   },
   {
     id: 3,
-    img: "/react-facebook-clone/imgs/react.jpg",
+    img: reactImg,
     title: "Facebook React Group",
     group: true,
   },
   {
     id: 4,
-    img: "/react-facebook-clone/imgs/react.jpg",
+    img: reactImg,
     title: "Facebook React Group",
     group: true,
   },
   {
     id: 5,
-    img: "/react-facebook-clone/imgs/react.jpg",
+    img: reactImg,
     title: "Facebook React Group",
     group: true,
   },
   {
     id: 6,
-    img: "/react-facebook-clone/imgs/react.jpg",
+    img: reactImg,
     title: "Facebook React Group",
     group: true,
   },
   {
     id: 7,
-    img: "/react-facebook-clone/imgs/react.jpg",
+    img: reactImg,
     title: "Facebook React Group",
     group: true,
   },
   {
     id: 8,
-    img: "/react-facebook-clone/imgs/react.jpg",
+    img: reactImg,
     title: "Facebook React Group",
     group: true,
   },
@@ -112,7 +114,7 @@ export const postsData = [
     post_privacy: "public",
     post_body:
       "My Name is amr mohamed and this is first app by react framework",
-    post_imgs: ["imgs/cover.jpg"],
+    post_imgs: [coverImg],
     post_likes: 2,
     post_comments: [
       {

@@ -1,4 +1,3 @@
-import React from "react";
 import {
   HomeIcon,
   UserGroupIcon,
@@ -11,6 +10,8 @@ import {
   BellIcon,
   HomeIcon as HomeSolid,
 } from "@heroicons/react/solid";
+import facebookLogo from "../../imgs/facebook-logo.png";
+import avatarImg from "../../imgs/avatar.jpg";
 import { BsCaretDownFill, BsList, BsMessenger } from "react-icons/bs";
 import NavbarLink from "./NavbarLink";
 import Dropdown from "./Dropdown";
@@ -30,14 +31,7 @@ export default function Navbar() {
         {/* Search */}
         <div className="flex flex-shrink-0 items-center sm:mr-7">
           <Link to="/">
-            <img
-              src={
-                window.location.origin +
-                "/react-facebook-clone/imgs/facebook-logo.png"
-              }
-              className="h-10 w-10 mr-2"
-              alt="logo"
-            />
+            <img src={facebookLogo} className="h-10 w-10 mr-2" alt="logo" />
           </Link>
           <Search smHide />
           <div className="md:hidden ml-2 rounded-full w-9 h-9 bg-gray-100 flex items-center justify-center bg-hover group hover:bg-blue-100">
@@ -61,9 +55,7 @@ export default function Navbar() {
             className="hidden lg:flex bg-hover hover:bg-gray-100 rounded-full w-20 p-1 pr-2 items-center overflow-hidden mr-2"
           >
             <img
-              src={
-                window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"
-              }
+              src={avatarImg}
               className="rounded-full h-8 w-8 object-cover"
               alt="profile"
             />

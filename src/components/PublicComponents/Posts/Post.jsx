@@ -14,7 +14,7 @@ import { MdClose } from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import { Navigation } from "swiper";
 import "swiper/swiper-bundle.css";
-
+import avatarImg from "../../../imgs/avatar.jpg";
 Modal.setAppElement("body");
 
 export default function Post({ post }) {
@@ -68,10 +68,7 @@ export default function Post({ post }) {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img
-                  src={
-                    window.location.origin +
-                    "/react-facebook-clone/imgs/avatar.jpg"
-                  }
+                  src={avatarImg}
                   className="img-avatar w-10 h-10 mr-2"
                   alt="user img"
                 />
@@ -179,7 +176,7 @@ export default function Post({ post }) {
           {post.post_imgs.slice(0, 4).map((img, index) => (
             <img
               key={createID()}
-              src={window.location.origin + "/react-facebook-clone/" + img}
+              src={img}
               className={`h-full w-full object-cover ${
                 post.post_imgs.length === 3 && index === 0 ? "col-span-2" : ""
               } ${post.post_imgs.length > 1 ? "h-56" : ""}`}

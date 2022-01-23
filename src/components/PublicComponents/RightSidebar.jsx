@@ -8,7 +8,8 @@ import {
 } from "react-icons/bs";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
-
+import happyImg from "../../imgs/happiness.jpg";
+import avatarImg from "../../imgs/avatar.jpg";
 export default function RightSidebar() {
   return (
     <div className="hidden lg:block lg:w-[300px] flex-shrink-0">
@@ -24,10 +25,7 @@ export default function RightSidebar() {
               <div className="relative h-40 flex items-center p-2">
                 <img
                   className="w-full h-full object-cover rounded-t brightness-50 absolute top-0 left-0 z-0"
-                  src={
-                    window.location.origin +
-                    "/react-facebook-clone/imgs/happiness.jpg"
-                  }
+                  src={happyImg}
                   alt="suggested"
                   draggable="false"
                 />
@@ -47,26 +45,17 @@ export default function RightSidebar() {
               <div className="rounded-b bg-white flex items-center p-2">
                 <div className="-space-x-3 flex mr-2">
                   <img
-                    src={
-                      window.location.origin +
-                      "/react-facebook-clone/imgs/avatar.jpg"
-                    }
+                    src={avatarImg}
                     className=" w-7 h-7 img-avatar"
                     alt="friend img"
                   />
                   <img
-                    src={
-                      window.location.origin +
-                      "/react-facebook-clone/imgs/avatar.jpg"
-                    }
+                    src={avatarImg}
                     className=" w-7 h-7 img-avatar"
                     alt="friend img"
                   />
                   <img
-                    src={
-                      window.location.origin +
-                      "/react-facebook-clone/imgs/avatar.jpg"
-                    }
+                    src={avatarImg}
                     className=" w-7 h-7 img-avatar"
                     alt="friend img"
                   />
@@ -136,7 +125,7 @@ export function ContactItem(props) {
     <li className="bg-hover hover:bg-gray-200 p-2 flex items-center rounded">
       <div className="flex-shrink-0 mr-4 relative">
         <img
-          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
+          src={avatarImg}
           className="img-avatar h-10 w-10"
           alt="user img profle"
         />

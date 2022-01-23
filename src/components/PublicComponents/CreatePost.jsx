@@ -4,6 +4,7 @@ import { CgSmileMouthOpen } from "react-icons/cg";
 import { useContext, useRef, useState } from "react";
 import { createID, truncate } from "../../helpers";
 import { PostContext } from "../../context/Postcontext";
+import avatarImg from "../../imgs/avatar.jpg";
 export default function CreatePost() {
   const { addPost } = useContext(PostContext);
   const imgInput = useRef();
@@ -77,7 +78,7 @@ export default function CreatePost() {
     <div className="bg-white p-4 rounded shadow">
       <div className="flex flex-col items-center sm:items-start sm:flex-row">
         <img
-          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
+          src={avatarImg}
           className="img-avatar w-12 h-12 mr-2 maxsm:mb-2"
           alt="img profile user"
         />

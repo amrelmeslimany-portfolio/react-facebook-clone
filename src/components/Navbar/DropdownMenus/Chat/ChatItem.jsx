@@ -1,15 +1,11 @@
-import React from "react";
+import avatarImg from "../../../../imgs/avatar.jpg";
 import { BsCircleFill } from "react-icons/bs";
 
 export default function ChatItem(props) {
   return (
     <div className="bg-hover hover:bg-gray-100 rounded p-2 flex">
       <div className="flex-shrink-0 relative mr-2">
-        <img
-          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
-          className="w-16 h-16 img-avatar"
-          alt="name user"
-        />
+        <img src={avatarImg} className="w-16 h-16 img-avatar" alt="name user" />
 
         {props.online && (
           <BsCircleFill className="absolute bottom-1 right-1 text-green-500 text-sm border-2 rounded-circle border-white" />
@@ -27,7 +23,7 @@ export default function ChatItem(props) {
       </div>
       <div className="w-14 ml-2 flex items-center justify-center">
         <img
-          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
+          src={avatarImg}
           className="w-4 h-4 rounded-circle"
           alt="seen message"
         />

@@ -3,29 +3,33 @@ import { MdArrowForwardIos, MdHelpOutline } from "react-icons/md";
 import { BsMoon } from "react-icons/bs";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
+import avatarImg from "../../../../imgs/avatar.jpg";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   return (
     <>
       <SimpleBar className="h-[415px]">
         {/* Profile Link */}
-        <div className="flex bg-hover hover:bg-gray-100 p-2 rounded">
-          <div className="flex-shrink-0 mr-2">
-            <img
-              src={
-                window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"
-              }
-              className="w-20 h-20 img-avatar"
-              alt="user"
-            />
+        <Link to="/profile">
+          <div className="flex bg-hover hover:bg-gray-100 p-2 rounded">
+            <div className="flex-shrink-0 mr-2">
+              <img
+                src={avatarImg}
+                className="w-20 h-20 img-avatar"
+                alt="user"
+              />
+            </div>
+            <div className="flex-grow self-center overflow-hidden">
+              <strong className="truncate w-full block font-semibold text-xl capitalize">
+                Amr Mohamed
+              </strong>
+              <span className="text-gray-500 -mt-1 block">
+                See your profile
+              </span>
+            </div>
           </div>
-          <div className="flex-grow self-center overflow-hidden">
-            <strong className="truncate w-full block font-semibold text-xl capitalize">
-              Amr Mohamed
-            </strong>
-            <span className="text-gray-500 -mt-1 block">See your profile</span>
-          </div>
-        </div>
+        </Link>
 
         <hr className="my-2 border-gray-300" />
 

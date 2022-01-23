@@ -2,7 +2,10 @@ import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper-bundle.css";
-
+import coverImg from "../../imgs/cover.jpg";
+import avatarImg from "../../imgs/avatar.jpg";
+import happyImg from "../../imgs/happiness.jpg";
+import reactImg from "../../imgs/react.jpg";
 import { FaUserPlus, FaUniversity } from "react-icons/fa";
 import { AiFillMessage } from "react-icons/ai";
 import { RiHandbagFill, RiFilterFill } from "react-icons/ri";
@@ -16,9 +19,7 @@ export default function Profile() {
         <div className="mt-[64px] container">
           {/* Cover */}
           <img
-            src={
-              window.location.origin + "/react-facebook-clone/imgs/cover.jpg"
-            }
+            src={coverImg}
             className="h-[380px] brightness-75 object-cover rounded-b-md w-full"
             alt="cover"
           />
@@ -27,10 +28,7 @@ export default function Profile() {
           <div className="-mt-28 relative z-10">
             <div className="text-center">
               <img
-                src={
-                  window.location.origin +
-                  "/react-facebook-clone/imgs/avatar.jpg"
-                }
+                src={avatarImg}
                 className="img-avatar w-40 h-40 mx-auto !border-4 !border-gray-50 mb-2"
                 alt="profile"
               />
@@ -168,10 +166,7 @@ export default function Profile() {
                   <SwiperSlide className="text-center">
                     <div className="h-64 rounded-md overflow-hidden brightness-75 group">
                       <img
-                        src={
-                          window.location.origin +
-                          "/react-facebook-clone/imgs/happiness.jpg"
-                        }
+                        src={happyImg}
                         className="w-full h-full object-cover group-hover:scale-105 duration-500"
                         alt="stories"
                       />
@@ -181,10 +176,7 @@ export default function Profile() {
                   <SwiperSlide className="text-center">
                     <div className="h-64 rounded-md overflow-hidden brightness-75 group">
                       <img
-                        src={
-                          window.location.origin +
-                          "/react-facebook-clone/imgs/happiness.jpg"
-                        }
+                        src={happyImg}
                         className="w-full h-full object-cover group-hover:scale-105 duration-500"
                         alt="stories"
                       />
@@ -194,10 +186,7 @@ export default function Profile() {
                   <SwiperSlide className="text-center">
                     <div className="h-64 rounded-md overflow-hidden brightness-75 group">
                       <img
-                        src={
-                          window.location.origin +
-                          "/react-facebook-clone/imgs/happiness.jpg"
-                        }
+                        src={happyImg}
                         className="w-full h-full object-cover group-hover:scale-105 duration-500"
                         alt="stories"
                       />
@@ -207,10 +196,7 @@ export default function Profile() {
                   <SwiperSlide className="text-center">
                     <div className="h-64 rounded-md overflow-hidden brightness-75 group">
                       <img
-                        src={
-                          window.location.origin +
-                          "/react-facebook-clone/imgs/happiness.jpg"
-                        }
+                        src={happyImg}
                         className="w-full h-full object-cover group-hover:scale-105 duration-500"
                         alt="stories"
                       />
@@ -229,90 +215,63 @@ export default function Profile() {
                 <ul className="grid xs:grid-cols-3 grid-cols-2 gap-1">
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-full object-cover"
                     />
                   </li>
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/react.jpg"
-                      }
+                      src={reactImg}
                       alt="react"
                       className="w-full h-full object-cover"
                     />
                   </li>
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/happiness.jpg"
-                      }
+                      src={happyImg}
                       alt="happiness"
                       className="w-full h-full object-cover"
                     />
                   </li>
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-full object-cover"
                     />
                   </li>
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/react.jpg"
-                      }
+                      src={reactImg}
                       alt="react"
                       className="w-full h-full object-cover"
                     />
                   </li>
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/happiness.jpg"
-                      }
+                      src={happyImg}
                       alt="happiness"
                       className="w-full h-full object-cover"
                     />
                   </li>
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-full object-cover"
                     />
                   </li>
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/react.jpg"
-                      }
+                      src={reactImg}
                       alt="react"
                       className="w-full h-full object-cover"
                     />
                   </li>
                   <li className="overflow-hidden rounded-md h-40">
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/happiness.jpg"
-                      }
+                      src={happyImg}
                       alt="happiness"
                       className="w-full h-full object-cover"
                     />
@@ -336,10 +295,7 @@ export default function Profile() {
                 <ul className="grid xs:grid-cols-3 grid-cols-2 gap-2">
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />
@@ -349,10 +305,7 @@ export default function Profile() {
                   </li>
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />
@@ -362,10 +315,7 @@ export default function Profile() {
                   </li>
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />
@@ -375,10 +325,7 @@ export default function Profile() {
                   </li>
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />
@@ -388,10 +335,7 @@ export default function Profile() {
                   </li>
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />
@@ -401,10 +345,7 @@ export default function Profile() {
                   </li>
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />
@@ -414,10 +355,7 @@ export default function Profile() {
                   </li>
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />
@@ -427,10 +365,7 @@ export default function Profile() {
                   </li>
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />
@@ -440,10 +375,7 @@ export default function Profile() {
                   </li>
                   <li>
                     <img
-                      src={
-                        window.location.origin +
-                        "/react-facebook-clone/imgs/cover.jpg"
-                      }
+                      src={coverImg}
                       alt="cover"
                       className="w-full h-40 object-cover rounded-md"
                     />

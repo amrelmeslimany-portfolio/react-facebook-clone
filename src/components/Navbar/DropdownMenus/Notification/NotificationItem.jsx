@@ -1,14 +1,10 @@
 import { BsChatLeftFill } from "react-icons/bs";
-
+import avatarImg from "../../../../imgs/avatar.jpg";
 export default function NotificationItem() {
   return (
     <div className="flex bg-hover hover:bg-gray-100 rounded p-2">
       <div className="flex-shrink-0 mr-2 relative">
-        <img
-          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
-          className="w-16 h-16 img-avatar"
-          alt="user"
-        />
+        <img src={avatarImg} className="w-16 h-16 img-avatar" alt="user" />
 
         <div className="absolute top-10  shadow-md right-0 bg-gradient-to-t from-green-700 to-green-600 w-6 h-6 normal-avatar">
           <BsChatLeftFill className="text-gray-50 text-[10px]" />

@@ -16,7 +16,6 @@ export default function Story() {
           <StorySkelton />
           <StorySkelton />
           <StorySkelton />
-          <StorySkelton />
         </>
       ) : (
         <>

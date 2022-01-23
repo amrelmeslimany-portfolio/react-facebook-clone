@@ -6,6 +6,7 @@ import {
   leftSidebarGroupLinks as groupLinks,
   leftSidebarLinks as links,
 } from "../../data";
+import avatarImg from "../../imgs/avatar.jpg";
 
 export default function LeftSidebar() {
   return (
@@ -17,7 +18,7 @@ export default function LeftSidebar() {
             <CollapseMore
               oneItem
               links={{
-                img: "/react-facebook-clone/imgs/avatar.jpg",
+                img: avatarImg,
                 title: "Amr Mohamed",
               }}
             />
