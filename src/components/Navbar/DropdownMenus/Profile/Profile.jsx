@@ -12,7 +12,9 @@ export default function Profile() {
         <div className="flex bg-hover hover:bg-gray-100 p-2 rounded">
           <div className="flex-shrink-0 mr-2">
             <img
-              src="imgs/avatar.jpg"
+              src={
+                window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"
+              }
               className="w-20 h-20 img-avatar"
               alt="user"
             />

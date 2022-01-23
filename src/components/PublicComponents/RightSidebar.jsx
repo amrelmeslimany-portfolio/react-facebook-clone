@@ -24,7 +24,10 @@ export default function RightSidebar() {
               <div className="relative h-40 flex items-center p-2">
                 <img
                   className="w-full h-full object-cover rounded-t brightness-50 absolute top-0 left-0 z-0"
-                  src="imgs/happiness.jpg"
+                  src={
+                    window.location.origin +
+                    "/react-facebook-clone/imgs/happiness.jpg"
+                  }
                   alt="suggested"
                   draggable="false"
                 />
@@ -44,17 +47,26 @@ export default function RightSidebar() {
               <div className="rounded-b bg-white flex items-center p-2">
                 <div className="-space-x-3 flex mr-2">
                   <img
-                    src="imgs/avatar.jpg"
+                    src={
+                      window.location.origin +
+                      "/react-facebook-clone/imgs/avatar.jpg"
+                    }
                     className=" w-7 h-7 img-avatar"
                     alt="friend img"
                   />
                   <img
-                    src="imgs/avatar.jpg"
+                    src={
+                      window.location.origin +
+                      "/react-facebook-clone/imgs/avatar.jpg"
+                    }
                     className=" w-7 h-7 img-avatar"
                     alt="friend img"
                   />
                   <img
-                    src="imgs/avatar.jpg"
+                    src={
+                      window.location.origin +
+                      "/react-facebook-clone/imgs/avatar.jpg"
+                    }
                     className=" w-7 h-7 img-avatar"
                     alt="friend img"
                   />
@@ -124,7 +136,7 @@ export function ContactItem(props) {
     <li className="bg-hover hover:bg-gray-200 p-2 flex items-center rounded">
       <div className="flex-shrink-0 mr-4 relative">
         <img
-          src="imgs/avatar.jpg"
+          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
           className="img-avatar h-10 w-10"
           alt="user img profle"
         />

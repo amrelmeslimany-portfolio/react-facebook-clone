@@ -9,7 +9,9 @@ export default function StoryItem(props) {
     return (
       <div className="h-52 w-32 flex-shrink-0 rounded-lg relative overflow-hidden group">
         <img
-          src="imgs/happiness.jpg"
+          src={
+            window.location.origin + "/react-facebook-clone/imgs/happiness.jpg"
+          }
           className="absolute top-0 left-0 w-full h-full object-cover brightness-50 group-hover:scale-105 group-hover:brightness-75 duration-500 z-0"
           alt="story img"
           draggable="false"
@@ -28,7 +30,9 @@ export default function StoryItem(props) {
     return (
       <div className="h-52 w-32 flex-shrink-0 rounded-lg relative overflow-hidden group">
         <img
-          src="imgs/happiness.jpg"
+          src={
+            window.location.origin + "/react-facebook-clone/imgs/happiness.jpg"
+          }
           className="absolute top-0 left-0 w-full h-full object-cover brightness-50 group-hover:scale-105 group-hover:brightness-75 duration-500 z-0"
           alt="story img"
           draggable="false"
@@ -36,7 +40,9 @@ export default function StoryItem(props) {
         <div className="absolute w-full h-full top-0 left-0 flex justify-between flex-col z-[1]">
           <div className="rounded-circle w-11 h-11 overflow-hidden border-4 border-primary mt-2 ml-2">
             <img
-              src="imgs/avatar.jpg"
+              src={
+                window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"
+              }
               alt="user profile img"
               className="w-full h-full object-cover"
             />

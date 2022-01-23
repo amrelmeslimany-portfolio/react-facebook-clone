@@ -31,7 +31,10 @@ export default function Navbar() {
         <div className="flex flex-shrink-0 items-center sm:mr-7">
           <Link to="/">
             <img
-              src="imgs/facebook-logo.png"
+              src={
+                window.location.origin +
+                "/react-facebook-clone/imgs/facebook-logo.png"
+              }
               className="h-10 w-10 mr-2"
               alt="logo"
             />
@@ -58,7 +61,9 @@ export default function Navbar() {
             className="hidden lg:flex bg-hover hover:bg-gray-100 rounded-full w-20 p-1 pr-2 items-center overflow-hidden mr-2"
           >
             <img
-              src="imgs/avatar.jpg"
+              src={
+                window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"
+              }
               className="rounded-full h-8 w-8 object-cover"
               alt="profile"
             />

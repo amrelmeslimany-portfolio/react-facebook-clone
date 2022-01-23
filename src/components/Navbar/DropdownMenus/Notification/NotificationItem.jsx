@@ -5,7 +5,7 @@ export default function NotificationItem() {
     <div className="flex bg-hover hover:bg-gray-100 rounded p-2">
       <div className="flex-shrink-0 mr-2 relative">
         <img
-          src="imgs/avatar.jpg"
+          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
           className="w-16 h-16 img-avatar"
           alt="user"
         />

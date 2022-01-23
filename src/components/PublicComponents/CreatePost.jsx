@@ -77,7 +77,7 @@ export default function CreatePost() {
     <div className="bg-white p-4 rounded shadow">
       <div className="flex flex-col items-center sm:items-start sm:flex-row">
         <img
-          src="imgs/avatar.jpg"
+          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
           className="img-avatar w-12 h-12 mr-2 maxsm:mb-2"
           alt="img profile user"
         />

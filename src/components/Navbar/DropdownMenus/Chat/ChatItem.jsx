@@ -6,7 +6,7 @@ export default function ChatItem(props) {
     <div className="bg-hover hover:bg-gray-100 rounded p-2 flex">
       <div className="flex-shrink-0 relative mr-2">
         <img
-          src="imgs/avatar.jpg"
+          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
           className="w-16 h-16 img-avatar"
           alt="name user"
         />
@@ -27,7 +27,7 @@ export default function ChatItem(props) {
       </div>
       <div className="w-14 ml-2 flex items-center justify-center">
         <img
-          src="imgs/avatar.jpg"
+          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
           className="w-4 h-4 rounded-circle"
           alt="seen message"
         />

@@ -68,7 +68,10 @@ export default function Post({ post }) {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <img
-                  src="imgs/avatar.jpg"
+                  src={
+                    window.location.origin +
+                    "/react-facebook-clone/imgs/avatar.jpg"
+                  }
                   className="img-avatar w-10 h-10 mr-2"
                   alt="user img"
                 />

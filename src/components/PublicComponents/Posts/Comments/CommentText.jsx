@@ -21,7 +21,7 @@ export default function CommentText(props) {
     <div className="flex">
       <div className="flex-shrink-0 mr-2">
         <img
-          src="imgs/avatar.jpg"
+          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
           className="img-avatar w-9 h-9"
           alt="me profile"
         />

@@ -16,7 +16,10 @@ export default function LeftSidebar() {
           <div>
             <CollapseMore
               oneItem
-              links={{ img: "imgs/avatar.jpg", title: "Amr Mohamed" }}
+              links={{
+                img: "/react-facebook-clone/imgs/avatar.jpg",
+                title: "Amr Mohamed",
+              }}
             />
             <CollapseMore links={links} cutNumber={6} collapseBTN />
           </div>
