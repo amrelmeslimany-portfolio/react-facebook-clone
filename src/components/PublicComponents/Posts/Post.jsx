@@ -179,7 +179,7 @@ export default function Post({ post }) {
           {post.post_imgs.slice(0, 4).map((img, index) => (
             <img
               key={createID()}
-              src={img}
+              src={window.location.origin + "/react-facebook-clone/" + img}
               className={`h-full w-full object-cover ${
                 post.post_imgs.length === 3 && index === 0 ? "col-span-2" : ""
               } ${post.post_imgs.length > 1 ? "h-56" : ""}`}

@@ -33,7 +33,7 @@ export function CollapseMore(props) {
       >
         <div className="w-[43px]">
           <img
-            src={link.img}
+            src={window.location.origin + "/react-facebook-clone/" + link.img}
             className={`${
               link.group ? "rounded" : "rounded-circle"
             } object-cover w-7 h-7  md:w-10 md:h-10`}
