@@ -1,13 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #f0f2f5;
+    overflow-y: hidden
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.private-radio .radio-customed::before,
+.private-radio .radio-customed::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: 0.2s linear;
+}
+
+
+.private-radio .radio-customed::before {
+    width: 45%;
+
+}
+
+.private-radio .radio-customed::after {
+    width: 50%;
+    border: 1px solid #98b0e921;
+}
+
+.private-radio input:checked~.radio-customed::before {
+    width: 95%;
+}
+
+.private-radio input:checked~.radio-customed::after {
+    transform: translateX(100%);
+    background-color: white;
+
+}
+
+
+
+.hide-scroll-style::-webkit-scrollbar {
+    opacity: 0;
+    width: 0;
+}
+
+
+.bg-hover {
+    @apply transition duration-200 cursor-pointer;
+}
+
+.flex-center {
+    @apply flex items-center justify-center;
+}
+
+.badge {
+    @apply bg-red-500 rounded-full font-bold py-0.5 px-1 text-xs text-white;
+}
+
+.img-avatar {
+    @apply object-cover rounded-circle border border-gray-300;
+}
+
+.normal-avatar {
+    @apply rounded-circle flex items-center justify-center
+}
+
+.segment {
+    @apply py-2 px-4 bg-white rounded-md shadow;
+}
+
+.simplebar-track {
+    right: -8px;
+}
+
+
+.simplebar-scrollbar:before {
+    background: rgb(187, 187, 187) !important;
+    border-radius: 0 !important;
+}
+
+.simplebar-track.simplebar-vertical {
+    width: 8px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+    opacity: 0.8;
 }

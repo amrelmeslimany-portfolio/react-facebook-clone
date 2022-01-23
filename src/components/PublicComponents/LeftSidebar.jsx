@@ -1,0 +1,42 @@
+import FooterLinks from "./FooterLinks";
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.min.css";
+import { CollapseMore } from "./CollapseMore";
+import {
+  leftSidebarGroupLinks as groupLinks,
+  leftSidebarLinks as links,
+} from "../../data";
+
+export default function LeftSidebar() {
+  return (
+    <div className="w-[43px] flex-shrink-0 md:w-[300px]">
+      <SimpleBar className="h-[calc(100vh-64px)]">
+        <div className="md:p-4">
+          {/* Links */}
+          <div>
+            <CollapseMore
+              oneItem
+              links={{ img: "imgs/avatar.jpg", title: "Amr Mohamed" }}
+            />
+            <CollapseMore links={links} cutNumber={6} collapseBTN />
+          </div>
+          {/* Shortcuts */}
+          <div className="hidden md:block group">
+            <hr className="my-2 border-gray-300" />
+            <div className="flex justify-between items-center">
+              <h3 className="font-semibold text-lg text-gray-500 my-2 ">
+                Your Shortcuts
+              </h3>
+              <span className="text-primary  duration-200 group-hover:scale-100 scale-0">
+                Edit
+              </span>
+            </div>
+            <CollapseMore links={groupLinks} cutNumber={4} collapseBTN />
+          </div>
+          {/* Footer Links */}
+          <FooterLinks />
+        </div>
+      </SimpleBar>
+    </div>
+  );
+}
