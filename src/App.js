@@ -9,8 +9,11 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/react-facebook-clone/" element={<Home />}></Route>
+          <Route
+            path="/react-facebook-clone/profile"
+            element={<Profile />}
+          ></Route>
         </Routes>
       </div>
     </BrowserRouter>
