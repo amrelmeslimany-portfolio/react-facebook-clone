@@ -17,7 +17,7 @@ export default function LeftSidebar() {
             <CollapseMore
               oneItem
               links={{
-                img: "imgs/avatar.jpg",
+                img: "/react-facebook-clone/imgs/avatar.jpg",
                 title: "Amr Mohamed",
               }}
             />
