@@ -1,9 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaThumbsUp } from "react-icons/fa";
 import ReactTimeago from "react-timeago";
 import { formatTimeAgo } from "../../../../helpers";
+import avatarImg from "../../../../imgs/avatar.jpg";
 
-export default function CommentText(props) {
+export default React.memo(function CommentText(props) {
   let [commentLiked, setCommentLiked] = useState(false);
   let [commentsLikes, setCommentsLikes] = useState(
     props.reply ? props.replys.reply_likes : props.comment.comment_likes
@@ -20,11 +21,7 @@ export default function CommentText(props) {
   return (
     <div className="flex">
       <div className="flex-shrink-0 mr-2">
-        <img
-          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
-          className="img-avatar w-9 h-9"
-          alt="me profile"
-        />
+        <img src={avatarImg} className="img-avatar w-9 h-9" alt="me profile" />
       </div>
       <div className="max-w-full break-all whitespace-pre">
         <div className="bg-gray-100 rounded-xl p-2 pt-px relative">
@@ -82,4 +79,4 @@ export default function CommentText(props) {
       </div>
     </div>
   );
-}
+});

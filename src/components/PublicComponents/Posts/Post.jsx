@@ -15,6 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import { Navigation } from "swiper";
 import "swiper/swiper-bundle.css";
 import avatarImg from "../../../imgs/avatar.jpg";
+
 Modal.setAppElement("body");
 
 export default function Post({ post }) {
@@ -39,7 +40,7 @@ export default function Post({ post }) {
   };
   const handleComment = () => {
     setCommentInput(true);
-    setTimeout((_) => commentRef.current.focus(), 10);
+    setTimeout(() => commentRef.current.focus(), 10);
   };
 
   const handleLike = () => {

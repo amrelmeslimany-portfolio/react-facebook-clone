@@ -1,14 +1,21 @@
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { BsCamera, BsEmojiSmile } from "react-icons/bs";
 import { RiFileGifLine } from "react-icons/ri";
 import { BiSticker } from "react-icons/bi";
 import { PostContext } from "../../../../context/Postcontext";
 import { createID } from "../../../../helpers";
-
-export default function CommentInput({ reply, commentID, commentRef, postID }) {
+import avatarImg from "../../../../imgs/avatar.jpg";
+export default React.memo(function CommentInput({
+  reply,
+  commentID,
+  commentRef,
+  postID,
+}) {
   const [toggleBTN, setToggleBTN] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   const { addComment, addReply } = useContext(PostContext);
-  const showBTN = (e) => {
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
     e.target.value.trim() ? setToggleBTN(true) : setToggleBTN(false);
   };
 
@@ -16,7 +23,7 @@ export default function CommentInput({ reply, commentID, commentRef, postID }) {
   const handleAddComment = (e) => {
     if (e.type === "click" || e.code === "Enter") {
       let newComment;
-      let value = commentRef ? commentRef.current.value : e.target.value;
+      let value = inputValue;
       if (value && !value.includes("\n")) {
         if (reply) {
           newComment = {
@@ -42,13 +49,8 @@ export default function CommentInput({ reply, commentID, commentRef, postID }) {
         }
 
         setToggleBTN(false);
-        if (commentRef) {
-          commentRef.current.parentElement.parentElement.remove();
-          commentRef.current.value = "";
-        } else {
-          e.target.parentElement.parentElement.remove();
-          e.target.value = "";
-        }
+
+        setInputValue("");
         e.target.blur();
       }
     }
@@ -57,17 +59,14 @@ export default function CommentInput({ reply, commentID, commentRef, postID }) {
   return (
     <div className="flex">
       <div className="flex-shrink-0 mr-2">
-        <img
-          src={window.location.origin + "/react-facebook-clone/imgs/avatar.jpg"}
-          className="img-avatar w-9 h-9"
-          alt="add comment"
-        />
+        <img src={avatarImg} className="img-avatar w-9 h-9" alt="add comment" />
       </div>
       <div className="flex flex-grow py-2 px-3 bg-gray-100 gap-2 rounded-[25px] flex-wrap">
         <textarea
           onKeyPress={handleAddComment}
-          onInput={showBTN}
+          onInput={handleChange}
           ref={commentRef}
+          value={inputValue}
           type="text"
           className="bg-transparent resize-none overflow-hidden flex-auto ring-0 focus:outline-none pr-2  w-full"
           placeholder={reply ? "Add Reply..." : "Write a comment..."}
@@ -89,4 +88,4 @@ export default function CommentInput({ reply, commentID, commentRef, postID }) {
       </div>
     </div>
   );
-}
+});

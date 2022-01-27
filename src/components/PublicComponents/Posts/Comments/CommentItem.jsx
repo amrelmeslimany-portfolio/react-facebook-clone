@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react/cjs/react.development";
 import CommentInput from "./CommentInput";
 import CommentText from "./CommentText";

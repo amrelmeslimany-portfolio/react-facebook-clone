@@ -1,6 +1,4 @@
-import { createID } from "./helpers";
 import reactImg from "./imgs/react.jpg";
-import coverImg from "./imgs/cover.jpg";
 
 export const leftSidebarLinks = [
   {
@@ -106,35 +104,4 @@ export const leftSidebarGroupLinks = [
   },
 ];
 
-export const postsData = [
-  {
-    post_id: 1,
-    post_time: "7 jan 2022",
-    post_user: "Amr Mohamed",
-    post_privacy: "public",
-    post_body:
-      "My Name is amr mohamed and this is first app by react framework",
-    post_imgs: [coverImg],
-    post_likes: 2,
-    post_comments: [
-      {
-        comment_id: 1,
-        comment_time: "8 jan 2022",
-        comment_user: "another",
-        comment_body: "awsome post!",
-        comment_likes: 3,
-        comment_post_id: 1,
-        comment_replys: [
-          {
-            reply_id: createID(),
-            reply_time: "9 jan 2022",
-            reply_user: "parent name",
-            reply_body: "thanks man!",
-            reply_likes: 2,
-            reply_comment_id: 1,
-          },
-        ],
-      },
-    ],
-  },
-];
+export const postsData = [];

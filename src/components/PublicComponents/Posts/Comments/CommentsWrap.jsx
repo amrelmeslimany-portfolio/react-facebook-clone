@@ -6,7 +6,6 @@ export const CommentsWrap = (props) => {
     <div>
       <hr className="mt-1 mb-2 border-gray-300" />
 
-      {/* Add Comment */}
       <CommentInput commentRef={props.commentRef} postID={props.postID} />
 
       {props.commentsNumber ? (
