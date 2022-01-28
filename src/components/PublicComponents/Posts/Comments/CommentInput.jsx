@@ -23,7 +23,7 @@ export default React.memo(function CommentInput({
   const handleAddComment = (e) => {
     if (e.type === "click" || e.code === "Enter") {
       let newComment;
-      let value = inputValue;
+      let value = inputValue.trim();
       if (value && !value.includes("\n")) {
         if (reply) {
           newComment = {
