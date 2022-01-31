@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/react-facebook-clone/static/css/main.00f095fb.chunk.css",
-    "main.js": "/react-facebook-clone/static/js/main.825f246b.chunk.js",
-    "main.js.map": "/react-facebook-clone/static/js/main.825f246b.chunk.js.map",
+    "main.css": "/react-facebook-clone/static/css/main.13de3c85.chunk.css",
+    "main.js": "/react-facebook-clone/static/js/main.d665e55b.chunk.js",
+    "main.js.map": "/react-facebook-clone/static/js/main.d665e55b.chunk.js.map",
     "runtime-main.js": "/react-facebook-clone/static/js/runtime-main.7ada0fe3.js",
     "runtime-main.js.map": "/react-facebook-clone/static/js/runtime-main.7ada0fe3.js.map",
     "static/css/2.fc67a9f8.chunk.css": "/react-facebook-clone/static/css/2.fc67a9f8.chunk.css",
-    "static/js/2.85c62340.chunk.js": "/react-facebook-clone/static/js/2.85c62340.chunk.js",
-    "static/js/2.85c62340.chunk.js.map": "/react-facebook-clone/static/js/2.85c62340.chunk.js.map",
+    "static/js/2.5e2094bf.chunk.js": "/react-facebook-clone/static/js/2.5e2094bf.chunk.js",
+    "static/js/2.5e2094bf.chunk.js.map": "/react-facebook-clone/static/js/2.5e2094bf.chunk.js.map",
     "index.html": "/react-facebook-clone/index.html",
     "static/css/2.fc67a9f8.chunk.css.map": "/react-facebook-clone/static/css/2.fc67a9f8.chunk.css.map",
-    "static/css/main.00f095fb.chunk.css.map": "/react-facebook-clone/static/css/main.00f095fb.chunk.css.map",
-    "static/js/2.85c62340.chunk.js.LICENSE.txt": "/react-facebook-clone/static/js/2.85c62340.chunk.js.LICENSE.txt",
+    "static/css/main.13de3c85.chunk.css.map": "/react-facebook-clone/static/css/main.13de3c85.chunk.css.map",
+    "static/js/2.5e2094bf.chunk.js.LICENSE.txt": "/react-facebook-clone/static/js/2.5e2094bf.chunk.js.LICENSE.txt",
+    "static/media/Error-page.a0718f5d.png": "/react-facebook-clone/static/media/Error-page.a0718f5d.png",
     "static/media/avatar.0b6f781f.jpg": "/react-facebook-clone/static/media/avatar.0b6f781f.jpg",
     "static/media/cover.4257d72d.jpg": "/react-facebook-clone/static/media/cover.4257d72d.jpg",
     "static/media/facebook-logo.cb13d976.png": "/react-facebook-clone/static/media/facebook-logo.cb13d976.png",
@@ -21,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.7ada0fe3.js",
     "static/css/2.fc67a9f8.chunk.css",
-    "static/js/2.85c62340.chunk.js",
-    "static/css/main.00f095fb.chunk.css",
-    "static/js/main.825f246b.chunk.js"
+    "static/js/2.5e2094bf.chunk.js",
+    "static/css/main.13de3c85.chunk.css",
+    "static/js/main.d665e55b.chunk.js"
   ]
 }
