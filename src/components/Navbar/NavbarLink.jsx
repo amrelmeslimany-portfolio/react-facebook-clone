@@ -4,7 +4,7 @@ export default function NavbarLink(props) {
   const notification = () => {
     if (props.notification && props.notification > 0) {
       return (
-        <span className="absolute -top-2 -right-1 badge">
+        <span className="absolute -top-2 xl:-top-px right-0 xl:right-5 badge">
           {props.notification > 99 ? "99+" : props.notification}
         </span>
       );
@@ -12,7 +12,7 @@ export default function NavbarLink(props) {
   };
   return (
     <div
-      className={`h-12 w-12 xl:w-28 rounded flex justify-center relative items-center ${
+      className={`navbar-link ${
         props.active ? "relative" : "bg-hover hover:bg-gray-100"
       }`}
     >

@@ -11,11 +11,14 @@ export default function Story() {
     <div className="space-x-2 p-4 maxsm:pl-0 flex overflow-x-auto hide-scroll-style">
       {isLoading ? (
         <>
-          <StorySkelton />
-          <StorySkelton />
-          <StorySkelton />
-          <StorySkelton />
-          <StorySkelton />
+          <StorySkelton className="flex-shrink-0" />
+          <StorySkelton className="flex-shrink-0" />
+          <StorySkelton className="flex-shrink-0" />
+          <StorySkelton className="flex-shrink-0" />
+          <StorySkelton className="flex-shrink-0" />
+          <StorySkelton className="flex-shrink-0" />
+          <StorySkelton className="flex-shrink-0" />
+          <StorySkelton className="flex-shrink-0" />
         </>
       ) : (
         <>

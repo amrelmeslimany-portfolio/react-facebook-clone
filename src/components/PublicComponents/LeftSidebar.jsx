@@ -7,6 +7,7 @@ import {
   leftSidebarLinks as links,
 } from "../../data";
 import avatarImg from "../../imgs/avatar.jpg";
+import { Link } from "react-router-dom";
 
 export default function LeftSidebar() {
   return (
@@ -15,13 +16,15 @@ export default function LeftSidebar() {
         <div className="md:p-4">
           {/* Links */}
           <div>
-            <CollapseMore
-              oneItem
-              links={{
-                img: avatarImg,
-                title: "Amr Mohamed",
-              }}
-            />
+            <Link to="/profile">
+              <CollapseMore
+                oneItem
+                links={{
+                  img: avatarImg,
+                  title: "Amr Mohamed",
+                }}
+              />
+            </Link>
             <CollapseMore links={links} cutNumber={6} collapseBTN />
           </div>
           {/* Shortcuts */}
