@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-facebook-clone/static/css/main.13de3c85.chunk.css",
-    "main.js": "/react-facebook-clone/static/js/main.d665e55b.chunk.js",
-    "main.js.map": "/react-facebook-clone/static/js/main.d665e55b.chunk.js.map",
+    "main.css": "/react-facebook-clone/static/css/main.84e26de4.chunk.css",
+    "main.js": "/react-facebook-clone/static/js/main.6f3e9f77.chunk.js",
+    "main.js.map": "/react-facebook-clone/static/js/main.6f3e9f77.chunk.js.map",
     "runtime-main.js": "/react-facebook-clone/static/js/runtime-main.7ada0fe3.js",
     "runtime-main.js.map": "/react-facebook-clone/static/js/runtime-main.7ada0fe3.js.map",
     "static/css/2.fc67a9f8.chunk.css": "/react-facebook-clone/static/css/2.fc67a9f8.chunk.css",
-    "static/js/2.5e2094bf.chunk.js": "/react-facebook-clone/static/js/2.5e2094bf.chunk.js",
-    "static/js/2.5e2094bf.chunk.js.map": "/react-facebook-clone/static/js/2.5e2094bf.chunk.js.map",
+    "static/js/2.295c8efb.chunk.js": "/react-facebook-clone/static/js/2.295c8efb.chunk.js",
+    "static/js/2.295c8efb.chunk.js.map": "/react-facebook-clone/static/js/2.295c8efb.chunk.js.map",
     "index.html": "/react-facebook-clone/index.html",
     "static/css/2.fc67a9f8.chunk.css.map": "/react-facebook-clone/static/css/2.fc67a9f8.chunk.css.map",
-    "static/css/main.13de3c85.chunk.css.map": "/react-facebook-clone/static/css/main.13de3c85.chunk.css.map",
-    "static/js/2.5e2094bf.chunk.js.LICENSE.txt": "/react-facebook-clone/static/js/2.5e2094bf.chunk.js.LICENSE.txt",
+    "static/css/main.84e26de4.chunk.css.map": "/react-facebook-clone/static/css/main.84e26de4.chunk.css.map",
+    "static/js/2.295c8efb.chunk.js.LICENSE.txt": "/react-facebook-clone/static/js/2.295c8efb.chunk.js.LICENSE.txt",
     "static/media/Error-page.a0718f5d.png": "/react-facebook-clone/static/media/Error-page.a0718f5d.png",
     "static/media/avatar.0b6f781f.jpg": "/react-facebook-clone/static/media/avatar.0b6f781f.jpg",
     "static/media/cover.4257d72d.jpg": "/react-facebook-clone/static/media/cover.4257d72d.jpg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.7ada0fe3.js",
     "static/css/2.fc67a9f8.chunk.css",
-    "static/js/2.5e2094bf.chunk.js",
-    "static/css/main.13de3c85.chunk.css",
-    "static/js/main.d665e55b.chunk.js"
+    "static/js/2.295c8efb.chunk.js",
+    "static/css/main.84e26de4.chunk.css",
+    "static/js/main.6f3e9f77.chunk.js"
   ]
 }
