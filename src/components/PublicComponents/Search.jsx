@@ -1,22 +1,22 @@
 import { SearchIcon, XIcon } from "@heroicons/react/solid";
-import React, { useState } from "react";
 
 export default function Search(props) {
-  const [search, toggleSearch] = useState(false);
-
-  const handleSearchClick = () => {
-    toggleSearch(!search);
-  };
-
   return (
     <>
-      <div className="bg-gray-100 rounded-full p-2 flex items-center relative">
-        {search ? (
-          <XIcon className="h-5 text-gray-600" onClick={handleSearchClick} />
+      <div
+        className={`${
+          props.search ? "bg-blue-100" : "bg-gray-100"
+        } rounded-full p-2 flex items-center relative`}
+      >
+        {props.search ? (
+          <XIcon
+            className="h-5 text-gray-600"
+            onClick={props.handleSearchClick}
+          />
         ) : (
           <SearchIcon
             className="h-5 text-gray-600 lg:hidden"
-            onClick={handleSearchClick}
+            onClick={props.handleSearchClick}
           />
         )}
 
@@ -30,7 +30,7 @@ export default function Search(props) {
         />
       </div>
 
-      {search && (
+      {props.search && (
         <div className="lg:hidden bg-white absolute top-[64px] left-0 p-2 w-full">
           <div className="bg-gray-100 rounded-full p-2 flex items-center relative">
             <SearchIcon className="h-5 text-gray-600" />

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   HomeIcon,
   UserGroupIcon,
@@ -8,6 +9,9 @@ import {
 import {
   AdjustmentsIcon,
   BellIcon,
+  CubeIcon as CubeSolid,
+  TemplateIcon as TempSolid,
+  VideoCameraIcon as VidSolid,
   UserGroupIcon as GrpSolid,
   HomeIcon as HomeSolid,
 } from "@heroicons/react/solid";
@@ -25,7 +29,22 @@ import Menu from "./DropdownMenus/Menu/Menu";
 import { truncate } from "../../helpers";
 
 export default function Navbar() {
+  const [toggleNavbar, setToggleNavbar] = useState(false);
+  const [search, toggleSearch] = useState(false);
+
   const lc = useLocation();
+  const handleSearchClick = () => {
+    if (toggleNavbar) {
+      setToggleNavbar(false);
+    }
+    toggleSearch(!search);
+  };
+  const handleNavbar = () => {
+    if (search) {
+      toggleSearch(false);
+    }
+    setToggleNavbar(!toggleNavbar);
+  };
   return (
     <nav className="bg-white shadow-md py-3 px-4 flex items-center justify-between fixed top-0 left-0 w-full z-50">
       {/* Search */}
@@ -33,13 +52,28 @@ export default function Navbar() {
         <Link to="/">
           <img src={facebookLogo} className="h-10 w-10 mr-2" alt="logo" />
         </Link>
-        <Search smHide />
-        <div className="md:hidden ml-2 rounded-full w-9 h-9 bg-gray-100 flex items-center justify-center bg-hover group hover:bg-blue-100">
+        <Search
+          smHide
+          search={search}
+          handleSearchClick={handleSearchClick}
+          isNavbarOpen={{ val: toggleNavbar, setVal: setToggleNavbar }}
+        />
+        <div
+          onClick={handleNavbar}
+          className={`md:hidden ml-2 rounded-full w-9 h-9  flex items-center justify-center bg-hover group md:hover:bg-blue-100 ${
+            toggleNavbar ? "bg-blue-100" : "bg-gray-100"
+          }`}
+        >
           <BsList className="text-xl text-gray-600 group-hover:text-primary" />
         </div>
       </div>
       {/* Icons Links */}
-      <div className="space-x-4 flex-grow justify-center hidden md:flex">
+
+      <div
+        className={`md:space-x-4 flex flex-grow justify-center ${
+          !toggleNavbar && "maxmd:hidden"
+        } maxmd:absolute maxmd:top-[64px] maxmd:w-full maxmd:justify-evenly maxmd:bg-white maxmd:left-0 `}
+      >
         <NavLink to="/">
           {lc.pathname === "/" ? (
             <NavbarLink Icon={HomeSolid} active />
@@ -57,21 +91,21 @@ export default function Navbar() {
         </NavLink>
         <NavLink to="/watchs">
           {lc.pathname === "/watchs" ? (
-            <NavbarLink Icon={VideoCameraIcon} active />
+            <NavbarLink Icon={VidSolid} active />
           ) : (
             <NavbarLink Icon={VideoCameraIcon} />
           )}
         </NavLink>
         <NavLink to="/store">
           {lc.pathname === "/store" ? (
-            <NavbarLink Icon={TemplateIcon} active />
+            <NavbarLink Icon={TempSolid} active />
           ) : (
             <NavbarLink Icon={TemplateIcon} />
           )}
         </NavLink>
         <NavLink to="/cube">
           {lc.pathname === "/cube" ? (
-            <NavbarLink Icon={CubeIcon} active />
+            <NavbarLink Icon={CubeSolid} active />
           ) : (
             <NavbarLink Icon={CubeIcon} />
           )}

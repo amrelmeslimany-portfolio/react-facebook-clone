@@ -4,7 +4,7 @@ export default function NavbarLink(props) {
   const notification = () => {
     if (props.notification && props.notification > 0) {
       return (
-        <span className="absolute -top-2 xl:-top-px right-0 xl:right-5 badge">
+        <span className="absolute -top-2 maxmd:-top-2  xl:-top-px right-0 xl:right-5  badge">
           {props.notification > 99 ? "99+" : props.notification}
         </span>
       );
@@ -12,7 +12,7 @@ export default function NavbarLink(props) {
   };
   return (
     <div
-      className={`navbar-link ${
+      className={`navbar-link maxmd:py-6 ${
         props.active ? "relative" : "bg-hover hover:bg-gray-100"
       }`}
     >
@@ -21,7 +21,7 @@ export default function NavbarLink(props) {
         className={`${props.active ? "text-primary" : "text-gray-500"} h-7 `}
       />
       {props.active && (
-        <span className="absolute -bottom-3 bg-primary w-full h-1"></span>
+        <span className="absolute -bottom-3 maxmd:bottom-0 bg-primary w-full h-1"></span>
       )}
     </div>
   );
