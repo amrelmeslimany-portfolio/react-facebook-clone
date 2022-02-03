@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   HomeIcon,
   UserGroupIcon,
@@ -27,10 +27,14 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Profile from "./DropdownMenus/Profile/Profile";
 import Menu from "./DropdownMenus/Menu/Menu";
 import { truncate } from "../../helpers";
+import { PostContext } from "../../context/Postcontext";
 
 export default function Navbar() {
   const [toggleNavbar, setToggleNavbar] = useState(false);
   const [search, toggleSearch] = useState(false);
+  const {
+    state: { user: username },
+  } = useContext(PostContext);
 
   const lc = useLocation();
   const handleSearchClick = () => {
@@ -75,7 +79,7 @@ export default function Navbar() {
         } maxmd:absolute maxmd:top-[64px] maxmd:w-full maxmd:justify-evenly maxmd:bg-white maxmd:left-0 `}
       >
         <NavLink to="/">
-          {lc.pathname === "/" ? (
+          {lc.pathname === "/" || lc.pathname === "/profile" ? (
             <NavbarLink Icon={HomeSolid} active />
           ) : (
             <NavbarLink Icon={HomeIcon} />
@@ -123,9 +127,7 @@ export default function Navbar() {
             className="rounded-full h-8 w-8 object-cover"
             alt="profile"
           />
-          <p className=" ml-1 text-black font-bold">
-            {truncate("amr elmeslimany")}
-          </p>
+          <p className=" ml-1 text-black font-bold">{truncate(username)}</p>
         </Link>
 
         <div className="space-x-2 flex relative">

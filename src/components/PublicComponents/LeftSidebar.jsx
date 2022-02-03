@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import FooterLinks from "./FooterLinks";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
@@ -8,8 +9,12 @@ import {
 } from "../../data";
 import avatarImg from "../../imgs/avatar.jpg";
 import { Link } from "react-router-dom";
+import { PostContext } from "../../context/Postcontext";
 
 export default function LeftSidebar() {
+  const {
+    state: { user: username },
+  } = useContext(PostContext);
   return (
     <div className="w-[43px] flex-shrink-0 md:w-[300px]">
       <SimpleBar className="h-[calc(100vh-64px)]">
@@ -21,7 +26,7 @@ export default function LeftSidebar() {
                 oneItem
                 links={{
                   img: avatarImg,
-                  title: "Amr Mohamed",
+                  title: username,
                 }}
               />
             </Link>

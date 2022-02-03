@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { FaUserAlt } from "react-icons/fa";
 import {
   BsCameraVideoFill,
@@ -10,7 +11,12 @@ import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 import happyImg from "../../imgs/happiness.jpg";
 import avatarImg from "../../imgs/avatar.jpg";
+import { PostContext } from "../../context/Postcontext";
+import { truncate } from "../../helpers";
 export default function RightSidebar() {
+  const {
+    state: { user: username },
+  } = useContext(PostContext);
   return (
     <div className="hidden lg:block lg:w-[300px] flex-shrink-0">
       <SimpleBar className="h-[calc(100vh-64px)]">
@@ -61,8 +67,10 @@ export default function RightSidebar() {
                   />
                 </div>
                 <p className="text-gray-500 text-sm truncate">
-                  <span className="text-black font-medium">Amr'</span> You have
-                  new suggestion
+                  <span className="text-black font-medium ml-px">
+                    {truncate(username, 0)}'
+                  </span>{" "}
+                  You have new suggestion
                 </p>
               </div>
             </div>

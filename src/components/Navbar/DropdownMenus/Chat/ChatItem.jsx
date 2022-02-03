@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import avatarImg from "../../../../imgs/avatar.jpg";
 import { BsCircleFill } from "react-icons/bs";
+import { PostContext } from "../../../../context/Postcontext";
 
 export default function ChatItem(props) {
+  const {
+    state: { user: username },
+  } = useContext(PostContext);
   return (
     <div className="bg-hover hover:bg-gray-100 rounded p-2 flex">
       <div className="flex-shrink-0 relative mr-2">
@@ -12,7 +17,7 @@ export default function ChatItem(props) {
         )}
       </div>
       <div className="flex-grow self-center overflow-hidden">
-        <h3 className="text-[19px] truncate">Amr Mohamed</h3>
+        <h3 className="text-[19px] truncate capitalize">{username}</h3>
         <div className="text-gray-500 flex items-center -mt-2">
           <span className="truncate">
             here is message from this user now we can do it

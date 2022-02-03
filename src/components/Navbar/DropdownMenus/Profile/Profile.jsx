@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { BiCommentError, BiCog, BiLogOut } from "react-icons/bi";
 import { MdArrowForwardIos, MdHelpOutline } from "react-icons/md";
 import { BsMoon } from "react-icons/bs";
@@ -5,8 +6,16 @@ import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 import avatarImg from "../../../../imgs/avatar.jpg";
 import { Link } from "react-router-dom";
+import { PostContext } from "../../../../context/Postcontext";
 
 export default function Profile() {
+  const {
+    state: { user: username },
+    userLogin,
+  } = useContext(PostContext);
+  const handleLogout = () => {
+    userLogin("guest logged");
+  };
   return (
     <>
       <SimpleBar className="h-[415px]">
@@ -22,7 +31,7 @@ export default function Profile() {
             </div>
             <div className="flex-grow self-center overflow-hidden">
               <strong className="truncate w-full block font-semibold text-xl capitalize">
-                Amr Mohamed
+                {username}
               </strong>
               <span className="text-gray-500 -mt-1 block">
                 See your profile
@@ -56,16 +65,19 @@ export default function Profile() {
           <ItemLink Icon={BiCog} text={"Settings & Privacy"} />
           <ItemLink Icon={MdHelpOutline} text={"Help & Support"} />
           <ItemLink Icon={BsMoon} text={"Display & Accessibility"} />
-          <ItemLink Icon={BiLogOut} text={"Log Out"} />
+          <ItemLink Icon={BiLogOut} text={"Log Out"} onClick={handleLogout} />
         </div>
       </SimpleBar>
     </>
   );
 }
 
-export function ItemLink({ Icon, text }) {
+export function ItemLink({ Icon, text, ...other }) {
   return (
-    <div className="flex bg-hover hover:bg-gray-100 p-2 rounded items-center">
+    <div
+      className="flex bg-hover hover:bg-gray-100 p-2 rounded items-center"
+      {...other}
+    >
       <div className="flex-shrink-0 mr-3">
         <div className="normal-avatar w-10 h-10 bg-gray-200">
           <Icon className="text-2xl font-extrabold" />

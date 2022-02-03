@@ -6,6 +6,7 @@ export const ADD_POST_LIKE = "ADD_POST_LIKE";
 
 export const REMOVE_POST = "REMOVE_POST";
 
+export const USER_LOGIN = "USER_LOGIN";
 // Reducers
 let selectedPost;
 let posOFSelected;
@@ -61,6 +62,11 @@ export const PostReducer = (state, action) => {
         ),
       };
 
+    case USER_LOGIN:
+      return {
+        ...state,
+        user: action.payload,
+      };
     default:
       return state;
   }

@@ -1,8 +1,13 @@
 import { BsPlus } from "react-icons/bs";
 import happyImg from "../../../imgs/happiness.jpg";
 import avatarImg from "../../../imgs/avatar.jpg";
+import { useContext } from "react";
+import { PostContext } from "../../../context/Postcontext";
 
 export default function StoryItem(props) {
+  const {
+    state: { user: username },
+  } = useContext(PostContext);
   const truncate = (text) => {
     return text.length >= 12 ? text.slice(0, 12) + "..." : text;
   };
@@ -45,7 +50,7 @@ export default function StoryItem(props) {
           </div>
           <div className="p-2">
             <strong className="text-white break-words">
-              {truncate("Amr Mohamed")}
+              {truncate(username)}
             </strong>
           </div>
         </div>

@@ -7,6 +7,7 @@ import {
   ADD_REPLY,
   PostReducer,
   REMOVE_POST,
+  USER_LOGIN,
 } from "../reducers/postreducer";
 // Create Context
 export const PostContext = createContext();
@@ -14,6 +15,7 @@ export const PostContext = createContext();
 // Initial State
 const initialState = {
   posts: postsData,
+  user: "guest logged",
 };
 
 export default function Postcontext({ children }) {
@@ -43,9 +45,21 @@ export default function Postcontext({ children }) {
     dispatch({ type: REMOVE_POST, payload: post_id });
   };
 
+  const userLogin = (user_name) => {
+    dispatch({ type: USER_LOGIN, payload: user_name });
+  };
+
   return (
     <PostContext.Provider
-      value={{ state, addPost, addComment, addReply, removePost, addPostLike }}
+      value={{
+        state,
+        addPost,
+        addComment,
+        addReply,
+        removePost,
+        addPostLike,
+        userLogin,
+      }}
     >
       {children}
     </PostContext.Provider>

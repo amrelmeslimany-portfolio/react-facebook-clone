@@ -6,7 +6,10 @@ import { createID, truncate } from "../../helpers";
 import { PostContext } from "../../context/Postcontext";
 import avatarImg from "../../imgs/avatar.jpg";
 export default function CreatePost() {
-  const { addPost } = useContext(PostContext);
+  const {
+    addPost,
+    state: { user: username },
+  } = useContext(PostContext);
   const imgInput = useRef();
   const postBodyInput = useRef();
   const [postimg, setPostImg] = useState([]);
@@ -60,7 +63,7 @@ export default function CreatePost() {
     let submitedData = {
       post_id: createID(),
       post_time: new Date(),
-      post_user: "Amr Mohamed",
+      post_user: username,
       post_privacy: e.target.private.checked ? "private" : "public",
       post_body: postText.trim(),
       post_imgs: postimg.map((img) => img.src),
@@ -88,10 +91,7 @@ export default function CreatePost() {
             <textarea
               ref={postBodyInput}
               className="bg-gray-100 rounded-[25px] focus:rounded border-0 w-full resize-y  focus:ring-0  focus:outline-none p-2 min-h-[48px] hide-scroll-style"
-              placeholder={`What's on your mind, ${truncate(
-                "Amr mohamed",
-                0
-              )} ?`}
+              placeholder={`What's on your mind, ${truncate(username, 0)} ?`}
               rows="1"
               name="post_body"
               value={postText}

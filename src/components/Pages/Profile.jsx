@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
 import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
@@ -12,7 +13,11 @@ import { RiHandbagFill, RiFilterFill } from "react-icons/ri";
 import Posts from "../PublicComponents/Posts/Posts";
 import { Mousewheel, Navigation } from "swiper";
 import FooterLinks from "../PublicComponents/FooterLinks";
+import { PostContext } from "../../context/Postcontext";
 export default function Profile() {
+  const {
+    state: { user: username },
+  } = useContext(PostContext);
   return (
     <SimpleBar className="h-[100vh] overflow-x-hidden">
       <div className="bg-white shadow">
@@ -34,7 +39,7 @@ export default function Profile() {
               />
 
               <h2 className="font-medium text-3xl mb-1 capitalize">
-                Amr Elmeslimany
+                {username}
               </h2>
               <span className="text-gray-500 text-lg">This is the Bio</span>
             </div>
